@@ -134,50 +134,42 @@ a { color: inherit; }
 .header__nav a:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; border-radius: 4px; }
 .header__link-extra { display: none !important; }
 
+/* Headline: duas faixas azuis levemente tortas + tags flutuando nas bordas */
 .hero__headline {
-  --fs: min(116px, 12.4vw);
+  --fs: min(104px, 8.6vw);
   position: relative;
   font-size: var(--fs);
-  width: 6.7em;
-  margin-bottom: 8px;
 }
 
+/* As duas faixas têm a mesma largura: a 2ª linha usa fonte menor pra terminar junto da 1ª */
 .hero__title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   color: var(--branco);
   font-size: 1em;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: -.012em;
+  letter-spacing: -.02em;
 }
 
 .hero__line {
   display: block;
   background: var(--azul);
   text-align: center;
-  height: .99em;
-  line-height: 1.02em;
+  white-space: nowrap;
 }
 .hero__line--1 {
-  width: 6.55em;
-  transform: rotate(-.3deg);
+  padding: .08em .22em .14em;
+  transform: rotate(-1deg);
   transform-origin: left bottom;
 }
 .hero__line--2 {
-  width: 6.7em;
+  font-size: .74em;
+  padding: .12em .3em .16em;
   margin-top: .02em;
   transform: rotate(1.5deg);
   transform-origin: left top;
-}
-
-.hero__selo {
-  position: absolute;
-  z-index: 2;
-  left: -3.6%;
-  top: -8.5%;
-  width: 9.9%;
 }
 
 .tag {
@@ -188,7 +180,7 @@ a { color: inherit; }
   justify-content: center;
   background: var(--azul-escuro);
   color: var(--branco);
-  font-size: max(10px, calc(var(--fs) * .14));
+  font-size: max(8px, calc(var(--fs) * .16));
   font-weight: 800;
   letter-spacing: -.01em;
   line-height: 1;
@@ -197,15 +189,15 @@ a { color: inherit; }
   padding: .55em 1em;
   transform: translate(-50%, -50%) rotate(var(--rot));
 }
-.tag--tracking { --rot: -9deg; left: 8.1%; top: 53%; }
-.tag--pixel    { --rot: 13deg; left: 97.4%; top: 54.5%; }
+.tag--tracking { --rot: -9deg; left: 3%; top: 54%; }
+.tag--pixel    { --rot: 13deg; left: 97%; top: 52%; }
 
 .hero__sub {
   max-width: 760px;
   color: var(--azul-escuro);
   font-size: 18px;
   line-height: 1.25;
-  margin: 10px 0 32px;
+  margin: 20px 0 32px;
 }
 
 /* ---------- Bordas rasgadas ---------- */
@@ -746,7 +738,6 @@ a { color: inherit; }
   .hero { padding: 72px 0 53px; }
   .header__inner { padding: 0 71px; min-height: 72px; }
   .header__nav { gap: 36px; }
-  .hero__headline { --fs: 116px; margin-bottom: 0; }
   .hero__sub { max-width: 770px; font-size: 30px; line-height: 36px; margin: 28px 0 36px; }
 
   .saber { margin-top: 0; }
